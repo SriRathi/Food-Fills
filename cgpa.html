@@ -1,0 +1,140 @@
+<html>
+<head>
+<title>CGPA CALCULATION</title>
+<script>
+function gpa()
+{
+
+n=prompt("Enter number of subjects you have");
+var n;
+var g=[];
+var c=[];
+var m=[];
+n=parseInt(n);
+var csum=0,msum=0,gpa;
+csum=parseInt(csum);
+msum=parseInt(msum);
+for(i=1;i<=n;i++)
+{
+g[i]=prompt("Enter the subject"+i+"grade");
+
+}
+for(i=1;i<=n;i++)
+{
+c[i]=prompt("Enter the subject"+i+"credit");
+c[i]=parseInt(c[i]);
+}
+for(i=1;i<=n;i++)
+{
+if(g[i] == "S")
+{
+m[i] = c[i]*10;
+m[i]=parseInt(m[i]);
+
+}
+else if(g[i] == "A")
+{
+m[i] = c[i]*9;
+m[i]=parseInt(m[i]);
+}
+else if (g[i] == "B")
+{
+m[i] = c[i]*8;
+m[i]=parseInt(m[i]);
+}
+else if(g[i] == "C")
+{
+m[i] = c[i]*7;
+m[i]=parseInt(m[i]);
+}
+else if(g[i] == "D")
+{
+m[i] = c[i]*6;
+m[i]=parseInt(m[i]);
+}
+else if(g[i] == "E")
+{
+m[i] = c[i]*5;
+m[i]=parseInt(m[i]);
+}
+else if(g[i]=="RA")
+{
+alert("The GPA cannot be calculated");
+}
+}
+for(i=1;i<=n;i++)
+{
+csum=csum+c[i];
+csum=parseInt(csum);
+}
+for(i=1;i<=n;i++)
+{
+msum=msum+m[i];
+msum=parseInt(msum);
+}
+if(n>1)
+{
+gpa=msum/csum;
+alert("Your GPA is "+gpa);
+}
+}
+function cgpa()
+{
+var n=prompt("For how many semesters you want to calculate CGPA?");
+n=parseInt(n);
+var g=[];
+var cgpa,gsum=0;
+gsum=parseInt(gsum);
+for(i=1;i<=n;i++)
+{
+g[i]=prompt("Enter the GPA of semester "+i);
+g[i]=parseInt(g[i]);
+}
+for(i=1;i<=n;i++)
+{
+gsum=gsum+g[i];
+gsum=parseInt(gsum);
+}
+if(n>1)
+{
+cgpa=gsum/n;
+alert("Your CGPA is "+ cgpa);
+}
+}
+</script>
+<style>
+body
+{
+background-repeat:no-repeat;
+  background-image: url("ca.gif");
+background-size:100% 100%;
+color:yellow;
+font-family: "Times New Roman", Times, serif;
+}
+button
+{
+
+background-color: transparent;
+font-size:50px;
+font-family: "Times New Roman", Times, serif;
+border:none;
+padding: 100px 100px;
+color:black;
+}
+button:hover
+{
+
+color:white;
+cursor:pointer;
+
+}
+</style>
+</head>
+<body>
+<center>
+<h1>GPA & CGPA CALCULATOR</h1>
+<button onclick="return gpa()">CALCULATE GPA</button><br>
+<button onclick="return cgpa()">CALCULATE CGPA</button>
+</center>
+</body>
+</html>

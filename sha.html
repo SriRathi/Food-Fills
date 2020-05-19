@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BMI Calculator</title>
+<style>
+{
+  background-image: url("blue.jpg");
+background-image: url(".jpg");
+background-size:cover; 
+background-position:center;
+background-repeat:no-repeat;	
+height: 850px;
+background-color: black;
+background-attachment: fixed;
+}
+</style>
+</head>
+<body> 
+
+<center><h1>BMI = KG / (H/100 * H/100) <br/><br/></h1></center>
+	<center><h3>Height in CM</h3>
+	<input type="text" id="cm" > <br/><br/><br/>
+	<h3>Weight in KG</h3>
+	<input type="text" id="kg" > <br/><br/><br/>
+	<input type="submit" id="submit" value="Submit"> <br/><br/>
+<p style="font-size:25px";>Under Weight = Less than 18.6<br/>
+Normal Range = 18.6 and 24.9<br/>
+Overweight = Greater than 24.9</p><br/></center>
+<div id="result"></div>
+
+
+<center><script>
+document.getElementById("submit").addEventListener("click", bmiCalculator);
+function bmiCalculator(){
+var cm = parseInt(document.getElementById("cm").value);
+var kg = parseFloat(document.getElementById("kg").value);
+var bmi;
+var newCm= parseFloat(cm/100);
+bmi = kg / (newCm * newCm);
+bmi = bmi.toFixed(1);
+console.log(bmi);
+document.getElementById("result").innerHTML = bmi;
+document.write("<h1>");
+document.write("THE BODY MASS INDEX IS::"+bmi);
+document.write("</h1>");
+}
+</script></center>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>food fills</title>
+<style>
+.main {
+  font-size:10px;
+  font-family:"Lithos Pro Regular";
+  font-weight:lighter;
+  text-decoration: none;
+  color:grey;
+}
+.main:hover:not(.active){
+color:white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  background-color:black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-family:"Lithos Pro Regular";
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color:grey;
+}
+
+.active {
+  background-color: grey;
+}
+.str
+{
+   text-align:left;
+ }
+
+</style>
+</head>
+<body background=pink.jpg>
+<div class="main">
+<h2 style="text-align:center;background-color:black;padding-top:10px;padding-bottom:10px;padding-left:100px;">ABOUT US</h2>
+</div>
+<br/>
+
+<div class="str">
+<p>click on the button to display the date</p>
+</div>
+<button onclick="displaydate()"> the current time is?</button>
+<p id="demo" style="font-size:20px;font-color:red";></p>
+
+<p style="font-size:20px";><i>Building a website is, in many ways, an exercise of willpower. It’s tempting to get distracted by the bells and whistles of the design process, 
+and forget all about creating compelling content.</i></p>
+
+<p style="font-size:20px";><i>It's that compelling content that's crucial to making inbound marketing work for your business.</i></p>
+
+<p style="font-size:20px";><i>So how do you balance your remarkable content creation with your web design needs? It all starts with the "About Us" page.
+Download our collection of awesome 'About Us' page examples here, and get tips  for making yours great, too. 
+For a remarkable about page, all you need to do is figure out your company's unique identity, and then share it with the world.
+ Easy, right? Of course not. Your "About Us" page is one of the most important pages on your website, and it needs to be well crafted. 
+This profile also happens to be one of the most commonly overlooked pages, which is why you should make it stand out.</i></p>
+
+<p style="font-size:20px";><i>The good news? It can be done. In fact, there are some companies out there with remarkable "About Us" pages, the elements of which you 
+can emulate on your own website.</i></p>
+
+<p style="font-size:20px";><i>By the end of this post, you'll know what makes some of today's best "About Us" and "About Me" pages so great, and how to 
+make your own about page that shares your company's greatness.</i></p>
+
+<center><div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div></center>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "Mouse Over Me"
+}
+ 
+function displaydate()
+{
+   document.getElementById("demo").innerHTML=Date();
+}
+
+</script>
+</body>
+</html>

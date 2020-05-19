@@ -1,0 +1,145 @@
+ <!DOCTYPE html>
+<html
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+
+			background-image: url("cupcakes.jpg");
+           			 background-size:cover; 
+          			  background-position:center;
+			background-repeat:no-repeat;	
+			height: 850px;
+			background-color: black;
+			background-attachment: fixed;
+		}
+		h2
+		{
+			font-size: 40px;
+		}
+		li
+		{
+			color: white;
+		}
+		h3
+		{
+			font-size: 25px;
+			color: white;
+		}
+		.btn
+		{
+			font-size: 20px;
+			width: 150px;
+			height: 30px;
+			
+			font-family: goudy old style; 	
+		}
+    .btn:hover
+    {
+     background-color: gray;
+     color: black;
+    }
+    #l1
+    {
+    	font-size:35px;
+    	color: brown;
+    }
+    #l4
+    {
+    	font-size: 35px;
+    	color: black;
+    }
+    p{
+    	color: white;
+    }
+	</style>
+</head>
+<body>
+	<div id="divcls"></div>
+	<center>
+<h1 style="font-size: 40px;color: white;">food fills</h1>
+</center>
+<h2 id="headr">foods:</h2>
+
+<h3>healty food pictures....<input type="submit" class="btn" value="healthy foods" onclick="func()" /></h3>
+<h3>about unhealthy foods....<input type="submit" class="btn" value="unhealthy foods" onclick="myFunc()" /></h3>
+<h3>delete un healthy foods ....<input type="submit" class="btn" value="delete unhealthy foods" onclick="myFuncn()" /></h3>
+<h3>love chocolates....<input type="submit" class="btn" value="chocolates" onclick="myFunctn()" /></h3>
+<h3>current date and time<input type="submit" class="btn" value="Date" onclick="funcc()" /></h3>
+
+<p id="demo4"></p>
+<h2 style="font-size:30px;">:</h3><p id="l1"></p>
+<ul id="l4"><p>THE description of some foods:</p>
+<li>healthy foods</li>
+<li>unhealthy foods</li>
+<li>delete unhealthy foods</li>
+<li>chocolates</li>
+</ul>
+
+<script type="text/javascript">
+
+	function func() {
+ 
+ var y = document.createElement("IMG");
+  y.setAttribute("src", "i1.jpg");
+  y.setAttribute("width", "304");
+  y.setAttribute("height", "228");
+  y.setAttribute("alt", "shopping");
+  document.body.appendChild(y);
+var z = document.createElement("IMG");
+  z.setAttribute("src", "i2.jpg");
+  z.setAttribute("width", "304");
+  z.setAttribute("height", "228");
+  z.setAttribute("alt", "shopping");
+  document.body.appendChild(z);
+var x1 = document.createElement("IMG");
+  x1.setAttribute("src", "i3.jpg");
+  x1.setAttribute("width", "304");
+  x1.setAttribute("height", "228");
+  x1.setAttribute("alt", "shopping");
+  document.body.appendChild(x1);
+var a = document.createElement("IMG");
+  a.setAttribute("src", "i4.jpg");
+  a.setAttribute("width", "304");-
+  a.setAttribute("height", "228");
+  a.setAttribute("alt", "shopping");
+  document.body.appendChild(a);
+
+    }
+	function myFunc()
+{
+  var newItem = document.createElement("LI");
+  var textnode = document.createTextNode("Foods are grouped together because they provide similar amounts of key nutrients. For example, key nutrients of the milk, yoghurt, cheese and alternatives group include calcium and protein, while the fruit group is a good source of vitamins, especially vitamin C. These food groups make up the Australian Guide to Healthy Eating.");
+  newItem.appendChild(textnode);
+  var list = document.getElementById("l1");
+  list.insertBefore(newItem, list.childNodes[0]);
+  }
+
+
+function myFuncn()
+{
+var list = document.getElementById("l4");
+  list.removeChild(list.childNodes[1]);
+
+}
+function myFunctn()
+{
+var textnode = document.createTextNode("this is a good food");
+  var item = document.getElementById("l4").childNodes[0];
+  item.replaceChild(textnode, item.childNodes[0]);
+ }   
+ function funcc()
+ {
+
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+alert("The Current Date is"+date);
+alert("The Current Time is"+time);
+alert("The Current Date and Time is"+dateTime);
+}
+
+</script>
+</body>
+</html>

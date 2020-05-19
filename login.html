@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>register page</title>
+<style>
+h1{
+text-align:center;color:red;background-color:black;
+}
+</style>
+</head>
+<body background ="blue.jpg">
+<h1><b>REGISTER</b></h1>
+<form action="user.php"  method="post">
+<center>
+
+
+<label>USERNAME:</label>
+<input type="text" name="name" id="name" value=" " placeholder="enter your good name"/>
+<br/><br/>
+
+<label>PASSWORD:</label>
+<input type="password"  name="pswd" id="pass" value=" " placeholder="########"/>
+<br/><br/>
+
+<label>CONFIRM PASSWORD:</label>
+<input type="password" name="cpswd" id="gen" value=" " placeholder="enter your gender"/>
+<br/><br/>
+
+<label>MAIL-ID:</label>
+<input type="text" name="email" id="email" value=" " placeholder="mail"/>
+<br/><br/>
+
+<input type="button" id="bt" value="test" onclick="validate()"/><br/><br/>
+
+<center><input type="reset" id="b1" value="reset"/></center><br/>
+<center><input type="submit" id="b2" value="submit"/></center><br/>
+</center>
+</form>
+<script>
+var v1,v2,v5;
+function check()
+{
+v1= new String(document.getElementById("pass").value);
+v2= v1.length;
+if(document.getElementById('pass').value=="")
+{
+window.alert("FILL OUT..... :( :( :( ....EMPTY!!");
+}
+if(v2<=5)
+{
+window.alert("Your password is too short ! not less than 5 characters!!!!!");
+return false;
+}
+else if(v2>5&&v2<10)
+{
+window.alert("Your password has medium security");
+return false;
+}
+else
+{
+window.alert("YOUR PASSWORD IS STRONG ENOUGH :0 :0 :0");
+}
+}
+function validate()
+{
+var str;
+var t=1;
+str =document.getElementById('email').value;
+if(document.getElementById('email').value=="")
+{
+window.alert("Empty..!fill out.. :( :( :( !!!!");
+}
+var res = str.split('@');
+if(str.split('@').length!=2)
+{
+window.alert(" MISSING @   !!!!!!!!");
+t=0;
+}
+var p1=res[0];
+var p2=res[1];
+if(p1.length==0)
+{
+alert("content before @ missing");
+t=0;
+}
+var dotsplt=p2.split('.');  
+if(p2.split(".").length<2)
+{
+alert("dot missing");
+t=0;
+}
+if(t==1)
+alert("wow…it is a valid email");
+}
+
+
+</script>
+</body>
+</html>
